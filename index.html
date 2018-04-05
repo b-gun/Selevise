@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Selevise</title>
+		<meta name="Resource-type" content="Document" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+<!-- 		<script type="text/javascript">
+			if (screen.width <= 699) {
+				document.location = "mobile.html";
+			}
+		</script> -->
+		<script type="text/javascript">
+			$("#section0 p").addClass("load");
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					// scrollOverflow: true,
+					scrollingSpeed: 800,
+					css3: true
+				});
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<style>
+			@font-face {
+   				font-family: Stellar; 
+   				src: url('fonts/Stellar-Regular.otf');
+			} 
+
+/*General Section CSS*/
+			.section {
+				text-align: center;
+				background-size: cover;
+			}		
+
+/*Section 0 CSS*/
+			#section0 {
+				/*background-image: url("img/image_part_001.png");*/
+				font-family: Stellar;
+				background-color: white;
+				background-size: 100% 100%;
+				color: black;
+				font-size: 150%;
+				overflow: hidden;
+			}
+
+			#myVideo{
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				top:0;
+				right:0;
+				width: 100%;
+				height: 100%;
+				background-size: 100% 100%;
+		 		background-color: black; /* in case the video doesn't fit the whole page*/
+		  		background-image: /* our video */;
+		  		background-position: center center;
+		  		background-size: contain;
+		   		object-fit: cover; /*cover video background */
+		   		opacity: 0.5;
+		   		z-index:3;
+			}
+
+			video::-webkit-media-controls {
+			  display:none !important;
+			}
+
+			#section0 .header{
+				background-color: black;
+				height: 10%
+				min-height: 10%;
+				width: 100%;
+				min-width: 100%;
+				position: absolute;
+				top: 0%;
+				color: white;
+				z-index: 4;
+				opacity: 0.7;
+			}
+
+			#section0 .header p{
+				opacity: 1;
+			}
+
+			#section0 .left{
+				position: absolute;
+				z-index: 4;
+				top: 30%;
+				width: 50%;
+				left: 5%;
+				min-width: 50%;
+			}
+
+			#section0 .right{
+				position: absolute;
+				z-index: 4;
+				top: 30%;
+				right: 0;
+				width: 50%;
+				min-width: 50%;
+			}
+
+			#section0 .bottom{
+				position: absolute;
+				z-index: 4;
+				top: 90%;
+			}
+
+			#section0 .layer{
+				position: absolute;
+				z-index: 4;
+				width: 100%;
+				left: 0;
+				top: 25%;
+				/* 
+				* Preventing flicker on some browsers 
+				* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+				*/
+				-webkit-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+			}
+
+			#section0 p {
+			position: absolute;
+			bottom: 5%;
+			left: 0;
+			right: 0;
+			margin-top: 25px;
+			font-size: 21px;
+			text-align: center;
+			-webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+			-moz-animation: fadein 5s; /* Firefox < 16 */
+			-ms-animation: fadein 5s; /* Internet Explorer */
+			-o-animation: fadein 5s; /* Opera < 12.1 */
+			animation: fadein 5s;
+			}
+
+			@keyframes fadein {
+			    from { opacity: 0; }
+			    to   { opacity: 1; }
+			}
+
+			/* Safari, Chrome and Opera > 12.1 */
+			@-webkit-keyframes fadein {
+			    from { opacity: 0; }
+			    to   { opacity: 1; }
+			}
+
+/*Section One CSS*/
+			#section1 {
+				font-family: Stellar;
+				background-color: black;
+				background-size: 100% 100%;
+				color: white;
+			}
+
+			#section1 .diagram {
+				position: absolute;
+        		top: 50%;
+        		left: 50%;
+        		margin-right: -50%;
+        		transform: translate(-50%, -50%)
+			}
+
+			#section1-mobile {
+				color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="fullpage">
+			<!-- First Section -->
+		<div class="section" id="section0">
+			<video id="myVideo" data-autoplay loop muted>
+            	<source src="img/background.mp4" type="video/mp4" />
+			</video>
+
+			<div class="header">
+				<img src="img/banner.png" height="100" width="auto">
+				<!-- <h1>Selevise</h1> -->
+			</div>
+
+			<div class="left">
+				<h1>Brains who can teach.</h1>
+				<h2>At Selevise, only the very best will do. </br>
+					We find the highest achievers,  </br>
+					who also have the ability to teach well. </br>
+					They teach with our unique session structure. </br>
+					So you understand <i>everything</i>. </br>
+			</div>
+
+			<div class="right">
+				<h1>Upcoming Events</h1>
+				<h2>Our first Maths Methods 3/4 workshop 
+				</br>is on the 10.05.17</h2>
+				<a href="https://www.facebook.com/selevise/"><img src="img/facebook_logo.png" height="96" width="96"></a>
+				</br>
+				<h2>RSVP here, secure your seat now.</h2><br>				
+			</div>
+
+				<p>Scroll down to find out more</p>	
+		</div>
+
+			<!-- Second Section -->
+			<div class="section" id="section1">
+				<div class="diagram">
+					<h2>Our Session Structure</h2>
+					<img src="img/Diagram2.png">
+				</div>
+			</div>
+		</div>	
+	</body>	
+</html>
